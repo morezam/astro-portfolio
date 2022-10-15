@@ -1,0 +1,23 @@
+.footer {
+	// text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 8rem;
+	padding-right: 2rem;
+	padding-bottom: 2rem;
+	padding-left: 2rem;
+	font-size: 1.7rem;
+}
+
+.socialLinks {
+	display: flex;
+	justify-content: center;
+	padding-top: 1.5rem;
+}
+
+.socialLogo {
+	width: 4.5rem;
+	padding: 0 1rem;
+}

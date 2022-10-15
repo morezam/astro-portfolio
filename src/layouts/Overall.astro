@@ -1,0 +1,33 @@
+---
+import Footer from '@components/Footer';
+import Nav from '@components/Nav';
+import '../styles/global.scss';
+const {
+	title = 'Mohammadreza Hamzehei: Personal Site',
+	description = 'The personal site of Mohammadreza Hamzehei',
+	home,
+	lang = 'en',
+} = Astro.props;
+---
+
+<html {lang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" property="og:description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<title>{title}</title>
+
+		<link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<Nav home={home ? true : false} client:load />
+		<slot />
+		<Footer />
+	</body>
+</html>

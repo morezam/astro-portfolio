@@ -1,0 +1,93 @@
+---
+import Overall from '@layouts/Overall.astro';
+const allBlogs = (await Astro.glob('./**/*.md'))
+	.filter(({ frontmatter }) => !!frontmatter.publishedDate)
+	.sort(
+		(a, b) =>
+			new Date(b.frontmatter.publishedDate).valueOf() -
+			new Date(a.frontmatter.publishedDate).valueOf()
+	);
+---
+
+<Overall title="Blog Posts">
+	<div class="blogs-page">
+		<h1 class="heading-1">Blogs</h1>
+		<ul class="all-blogs">
+			{
+				allBlogs.map(blog => {
+					return (
+						<a href={blog.url} class="blog-link">
+							<li class="blog">
+								<h2 class="blog-title">{blog.frontmatter.title}</h2>
+								<p class="blog-info">
+									{blog.frontmatter.minutesRead} -{' '}
+									{blog.frontmatter.publishedDate}
+								</p>
+								<p class="blog-excerpt"> {blog.frontmatter.excerpt}</p>
+							</li>
+						</a>
+					);
+				})
+			}
+		</ul>
+	</div>
+
+	<style lang="scss">
+		.blogs-page {
+			margin: auto;
+			@media (min-width: 600px) {
+				width: 70rem;
+			}
+			@media (min-width: 900px) {
+				width: 90rem;
+			}
+		}
+
+		.heading-1 {
+			margin-bottom: 3rem;
+			@media (min-width: 600px) {
+				font-size: 4rem;
+			}
+			text-align: center;
+		}
+
+		.all-blogs {
+			list-style: none;
+			font-size: 1.7rem;
+			@media (min-width: 600px) {
+			}
+		}
+
+		.blog {
+			border: 2px solid transparent;
+			border-radius: 1rem;
+			padding: 2rem 1rem;
+			margin: 1rem;
+			transition: border 0.3s;
+		}
+
+		.blog-info {
+			font-size: 1.5rem;
+			color: var(--c-gray-1);
+			padding-left: 1rem;
+			margin-top: 2px;
+		}
+
+		.blog-link {
+			text-decoration: none;
+			color: inherit;
+
+			&:hover li {
+				border: 2px solid var(--c-primary-full);
+			}
+		}
+
+		.blog-title {
+			font-size: 2rem;
+
+			@media (min-width: 600px) {
+				font-size: 2.5rem;
+			}
+		}
+	</style>
+</Overall>

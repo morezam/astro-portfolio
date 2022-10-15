@@ -1,0 +1,68 @@
+---
+import Overall from './Overall.astro';
+import Back from '@components/Back';
+import '../styles/blogGlobal.scss';
+
+const { frontmatter } = Astro.props;
+---
+
+<Overall title={frontmatter.title} description={frontmatter.excerpt}>
+	<div class="blog">
+		{frontmatter.notBlog ? null : <Back to="blog" text="all blogs" />}
+		<header>
+			<h1>{frontmatter.title}</h1>
+			<img class="hero-img" src={frontmatter.img} alt={frontmatter.title} />
+		</header>
+		<div class="content"><slot /></div>
+		{
+			frontmatter.notBlog ? null : (
+				<a href="/blog" class="view-more">
+					All Blogs
+				</a>
+			)
+		}
+	</div>
+
+	<style lang="scss">
+		.blog {
+			max-width: 70rem;
+			margin: auto;
+			padding: 0 1rem;
+			display: flex;
+			flex-direction: column;
+		}
+
+		header {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.hero-img {
+			padding: 0;
+
+			@media (min-width: 900px) {
+				max-width: 80rem;
+				padding: 5rem 0;
+				align-self: center;
+			}
+		}
+
+		.content {
+			font-size: 1.7rem;
+
+			@media (min-width: 600px) {
+				font-size: 2rem;
+			}
+		}
+
+		.view-more {
+			text-decoration: none;
+			padding: 1rem 2rem;
+			background-color: var(--c-primary-full);
+			color: var(--c-black);
+			font-size: 2rem;
+			margin-top: 3rem;
+			align-self: center;
+		}
+	</style>
+</Overall>

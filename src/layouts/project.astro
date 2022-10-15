@@ -1,0 +1,103 @@
+---
+import Button from '@components/Button/index.jsx';
+import Overall from './Overall.astro';
+import '../styles/projectGlobal.scss';
+import Back from '@components/Back';
+
+const { content } = Astro.props;
+---
+
+<Overall
+	title={`${content.title} | Projects`}
+	description={content.description}
+	lang={content.lang || 'en'}>
+	<div class="project">
+		<Back to="projects" text="all projects" />
+		<header class="hero">
+			<h1 class="title">{content.title}</h1>
+			<a href={content.urlPage} class="img-wrapper">
+				<div>{' '}</div>
+				<img class="image-hero" src={content.img} alt={content.title} />
+			</a>
+			<p class="sub">See it live <a href={content.urlPage}>Here</a></p>
+		</header>
+		<div>
+			<div class="content"><slot /></div>
+		</div>
+		<div class="more">
+			<a href="/projects">
+				<Button>View More</Button>
+			</a>
+		</div>
+	</div>
+	<style lang="scss">
+		.project {
+			display: flex;
+			flex-direction: column;
+			padding: 0 1rem;
+
+			@media (min-width: 600px) {
+				max-width: 80rem;
+				margin: auto;
+			}
+		}
+		.hero {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 3rem;
+			justify-content: center;
+		}
+
+		.sub {
+			font-size: 1.7rem;
+			color: var(--c-black-1);
+
+			& a {
+				color: var(--c-black);
+				background-color: var(--c-primary);
+			}
+		}
+
+		.content {
+			max-width: 80rem;
+			margin: auto;
+			font-size: 2rem;
+		}
+
+		.image-hero {
+			width: 93vw;
+			height: 20rem;
+			border: 0.5px solid var(--c-black-1);
+
+			@media (min-width: 600px) {
+				max-width: 90rem;
+				height: 100%;
+			}
+		}
+
+		.title {
+			font-size: 3rem;
+			margin-bottom: 3rem;
+			font-weight: 900;
+			text-transform: uppercase;
+			letter-spacing: 0.0625em;
+			text-align: center;
+
+			@media (min-width: 600px) {
+				font-size: 4rem;
+			}
+		}
+
+		.more {
+			align-self: center;
+			margin: 2rem 0;
+			font-size: 1.7rem;
+
+			@media (min-width: 600px) {
+				margin: 3rem 0;
+				font-size: 2rem;
+			}
+		}
+	</style>
+</Overall>

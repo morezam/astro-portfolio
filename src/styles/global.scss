@@ -1,0 +1,38 @@
+// Tokens
+:root {
+	--c-background: #ffffe0;
+	--c-secondary: #fcffb2;
+	--c-primary: #e1ffb1;
+	--c-primary-full: #b2ed54;
+	--c-gray-1: #808080;
+	--c-black: #181818;
+	--c-black-1: #1818189b;
+}
+
+// Base
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+@font-face {
+	font-family: 'Jaldi';
+	src: url(/assets/Jaldi-Regular.ttf);
+}
+
+body {
+	font-family: 'Jaldi', 'system-ui', sans-serif;
+	box-sizing: border-box;
+}
+
+h1,
+h2 {
+	font-family: 'Inter', 'system-ui', sans-serif;
+}

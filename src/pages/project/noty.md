@@ -4,7 +4,7 @@ title: NOTY
 client: Self
 publishDate: 2020-03-04 00:00:00
 imgPreview: /assets/noteProject.jpg
-img: /assets/Noty.jpg
+img: /assets/Noty.JPG
 featured: true
 urlPage: https://noty-app.vercel.app/
 description: |

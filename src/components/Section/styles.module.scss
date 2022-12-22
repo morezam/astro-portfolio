@@ -1,0 +1,20 @@
+.section {
+	margin: 5rem auto;
+	padding: 2rem;
+	max-width: 80rem;
+	// margin: auto;
+	font-size: 2rem;
+	background-color: var(--c-primary);
+}
+
+.section h2 {
+	font-size: 3rem;
+
+	&::first-letter {
+		text-transform: uppercase;
+	}
+}
+
+.content {
+	padding: 2rem 0;
+}

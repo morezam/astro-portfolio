@@ -1,23 +1,58 @@
 ---
+import Section from '@components/Section';
 import Overall from '@layouts/Overall.astro';
 ---
 
-<!-- home={true} -->
 <Overall
 	home={true}
 	title="Mohammadreza Hamzehei: Personal Site"
 	description="Mohammadreza Hamzehei: The portfolio site including selected projects and blog posts.">
-	<header class="hero">
-		<div class="left">
-			<div class="title">
-				<small class="subtitle">Hi, My name is</small>
-				<h1 class="name">Mohammadreza Hamzehei</h1>
+	<main>
+		<header class="hero">
+			<div class="left">
+				<div class="title">
+					<small class="subtitle">Hi, My name is</small>
+					<h1 class="name">Mohammadreza Hamzehei</h1>
+				</div>
 			</div>
-		</div>
-		<div class="right">
-			<img class="main-img" src="/assets/main.png" alt="main image" />
-		</div>
-	</header>
+			<div class="right">
+				<img class="main-img" src="/assets/main.png" alt="main image" />
+			</div>
+		</header>
+		<Section title="about" more="Learn more about me">
+			<p>
+				Hello! My name is Mohammadreza Hamzehei and I'm a front-end web
+				developer. I live in Iran and in a small village. During covid time and
+				quarantine I started learning English and because of this new knowledge
+				I could choose between a lot of categories to start a career. I
+				remembered when I was 14 I created a really simple website (not live
+				just in my PC) with HTML and notepad!. It was really fun. I showed it to
+				all my friends and family.
+			</p>
+		</Section>
+		<Section title="blogs" more="See all blogs">
+			<p>
+				Hello! My name is Mohammadreza Hamzehei and I'm a front-end web
+				developer. I live in Iran and in a small village. During covid time and
+				quarantine I started learning English and because of this new knowledge
+				I could choose between a lot of categories to start a career. I
+				remembered when I was 14 I created a really simple website (not live
+				just in my PC) with HTML and notepad!. It was really fun. I showed it to
+				all my friends and family.
+			</p>
+		</Section>
+		<Section title="about" more="Learn more about me">
+			<p>
+				Hello! My name is Mohammadreza Hamzehei and I'm a front-end web
+				developer. I live in Iran and in a small village. During covid time and
+				quarantine I started learning English and because of this new knowledge
+				I could choose between a lot of categories to start a career. I
+				remembered when I was 14 I created a really simple website (not live
+				just in my PC) with HTML and notepad!. It was really fun. I showed it to
+				all my friends and family.
+			</p>
+		</Section>
+	</main>
 
 	<style lang="scss">
 		.hero {
@@ -39,6 +74,7 @@ import Overall from '@layouts/Overall.astro';
 		.right {
 			background-repeat: no-repeat;
 			background-size: cover;
+			overflow: hidden;
 
 			@media (min-width: 800px) {
 				background-image: url(/assets/shape.svg);
@@ -51,14 +87,33 @@ import Overall from '@layouts/Overall.astro';
 
 		.main-img {
 			width: 25rem;
+
 			@media (min-width: 600px) {
 				width: 40rem;
+				animation: imgTransition 2s;
 			}
 			@media (min-width: 800px) {
 				width: 45rem;
 			}
 			@media (min-width: 1100px) {
 				width: 60rem;
+			}
+		}
+
+		@keyframes imgTransition {
+			0% {
+				transform: translateX(30rem);
+				opacity: 0;
+			}
+
+			50% {
+				transform: translateX(-7rem);
+				opacity: 0.7;
+			}
+
+			100% {
+				transform: translateX(0rem);
+				opacity: 1;
 			}
 		}
 

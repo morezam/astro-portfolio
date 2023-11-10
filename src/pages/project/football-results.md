@@ -6,7 +6,7 @@ publishDate: 2020-03-03 00:00:00
 imgPreview: /assets/footballProject.jpg
 img: /assets/football.png
 featured: true
-urlPage: https://football-eight.vercel.app/
+urlPage: https://football.morezam.pw/
 description: |
   See the latest football results.
 ---
@@ -25,4 +25,4 @@ In font-end part of the app I used NextJS with typescript. Typescript was really
 
 ## Repo and Live Website
 
-Here is a link to Football results's repo: [Football-results-repo](https://github.com/morezam/football) and its live web : [Live](https://football-eight.vercel.app/)
+Here is a link to Football results's repo: [Football-results-repo](https://github.com/morezam/football) and its live web : [Live](https://football.morezam.pw/)

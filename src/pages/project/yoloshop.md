@@ -6,7 +6,7 @@ publishDate: 2022-12-03 00:00:00
 imgPreview: /assets/shopProject.jpg
 img: /assets/yoloshop.png
 featured: true
-urlPage: https://yoloshop.up.railway.app/
+urlPage: https://yoloshop.morezam.pw/
 description: |
   Full-stack shopping app.
 ---
@@ -14,7 +14,7 @@ description: |
 ## Overview
 
 Yoloshop is a full-stack shopping app. Users after creating their accounts receive an email to verify their email address then they can comment a product , like or dislike a comment and add a product to their favorite list. They can add products to cart and checkout to buy them. They can see the status of that order in orders page of their profile. they can also see all of their comments and all of their favorites.
-Admin can see all orders and set the status of that order to delivered. Admin can see all of comments and delete them, all products and delete or edit them, all users and delete them or make them admin and create a product.
+Admin can see all orders and set the status of that order to delivered. Admin can see all of comments and delete them, all products and delete or edit them, all users and delete them or make them admin and obviously create a product.
 
 ## Tech Stack
 
@@ -30,4 +30,4 @@ In back-end I used express and typescript to create a server. Mongodb and mongoo
 
 ## Repo and Live Website
 
-Here is a link to Yoloshop's repo: [Yoloshop-repo](https://github.com/morezam/yoloshop) and its live web : [Live](https://yoloshop.up.railway.app/)
+Here is a link to Yoloshop's repo: [Yoloshop-repo](https://github.com/morezam/yoloshop) and its live web : [Live](https://yoloshop.morezam.pw/)

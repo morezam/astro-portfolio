@@ -6,7 +6,7 @@ publishDate: 2020-03-04 00:00:00
 imgPreview: /assets/noteProject.jpg
 img: /assets/Noty.JPG
 featured: true
-urlPage: https://noty-app.vercel.app/
+urlPage: https://noty.morezam.pw/
 description: |
   An app that helps users to take their notes and todos.
 ---
@@ -29,4 +29,4 @@ In server-side part of this app api/ folder in NextJs is used to create an api. 
 
 ## Repo and Live Website
 
-Here is a link to Noty's repo: [Noty-Repo](https://github.com/morezam/next-noty) and its live web : [Live](https://noty-app.vercel.app/)
+Here is a link to Noty's repo: [Noty-Repo](https://github.com/morezam/next-noty) and its live web : [Live](https://noty.morezam.pw/)
